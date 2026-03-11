@@ -253,7 +253,7 @@
         .carousel-track {
             display: flex;
             gap: 3rem;
-            animation: scroll 30s linear infinite;
+            animation: scroll 18s linear infinite;
             will-change: transform;
         }
         
@@ -464,6 +464,15 @@
             font-weight: 700;
         }
         
+        .contact-item a {
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary);
+        }
+
         .contact-item p {
             margin: 0;
             font-size: 0.95rem;
@@ -682,7 +691,7 @@
         /* Tablet - Keep carousel working */
         @media (min-width: 641px) and (max-width: 1024px) {
             .carousel-track {
-                animation: scroll 30s linear infinite;
+                animation: scroll 18s linear infinite;
             }
             
             .feature-card {
@@ -920,7 +929,7 @@
                 </div>
                 
                 <div class="contact-form">
-                    <form method="POST" action="https://formsubmit.co/info@dustte.com">
+                    <form method="POST" action="https://formsubmit.co/irshad@dustte.com">
                         <input type="hidden" name="_next" value="https://www.dustte.com/thank-you.html">
                         <input type="hidden" name="_subject" value="New Inquiry - DUSTTE Website">
                         <input type="hidden" name="_captcha" value="false">
