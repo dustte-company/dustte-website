@@ -689,31 +689,34 @@
                 min-width: 320px;
             }
         }
+
+        @media (max-width: 640px) {
             /* Disable carousel on mobile, show static grid */
             .carousel-track {
                 animation: none;
                 flex-wrap: wrap;
                 justify-content: center;
             }
-            
+
             .feature-card {
                 min-width: 280px;
                 max-width: 100%;
             }
-            
+
             /* Hide duplicate cards on mobile */
             .feature-card:nth-child(n+7) {
                 display: none;
             }
-            
+
             /* Stack About section on mobile */
             .about-content {
                 flex-direction: column;
             }
-            
+
             .stats-column {
                 width: 100%;
             }
+        }
     </style>
 </head>
 <body>
@@ -748,7 +751,7 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <div class="hero-text">
-                <p class="tagline">Premium Wholesale Trading</p>
+                <h1 class="tagline">Premium Wholesale Trading</h1>
                 <p>Your trusted partner for quality bulk products. Based in UAE, serving businesses worldwide with excellence and reliability.</p>
                 <div class="cta-buttons">
                     <a href="#contact" class="cta-button">Get In Touch</a>
@@ -894,7 +897,7 @@
                             <div class="contact-icon">📧</div>
                             <div>
                                 <h4>Email</h4>
-                                <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8de4e3ebe2cde9f8fef9f9e8a3eee2e0">[email&#160;protected]</a><br><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2841464e47684c5d5b5c5c4d064b4745">[email&#160;protected]</a></p>
+                                <p><a href="mailto:info@dustte.com">info@dustte.com</a><br><a href="mailto:sales@dustte.com">sales@dustte.com</a></p>
                             </div>
                         </div>
                         
@@ -917,7 +920,10 @@
                 </div>
                 
                 <div class="contact-form">
-                    <form>
+                    <form method="POST" action="https://formsubmit.co/info@dustte.com">
+                        <input type="hidden" name="_next" value="https://www.dustte.com/thank-you.html">
+                        <input type="hidden" name="_subject" value="New Inquiry - DUSTTE Website">
+                        <input type="hidden" name="_captcha" value="false">
                         <div class="form-group">
                             <label for="name">Company Name</label>
                             <input type="text" id="name" name="name" required>
@@ -943,10 +949,10 @@
     <!-- Footer -->
     <footer>
         <div class="logo">DUSTTE</div>
-        <p>&copy; 2024 DUSTTE LLC. All rights reserved.</p>
+        <p>&copy; 2025 DUSTTE LLC. All rights reserved.</p>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -956,19 +962,22 @@
                     target.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
-                    
+                    });
+                }
+            });
+        });
 
         // Mobile menu functions
         function openMobileMenu() {
             document.getElementById("mobileNav").classList.add("active");
             document.body.style.overflow = "hidden";
         }
-        
+
         function closeMobileMenu() {
             document.getElementById("mobileNav").classList.remove("active");
             document.body.style.overflow = "auto";
         }
-        
+
         // Close mobile menu when clicking outside
         document.getElementById("mobileNav").addEventListener("click", function(e) {
             if (e.target === this) {

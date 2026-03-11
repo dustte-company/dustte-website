@@ -1102,7 +1102,7 @@
     <!-- Footer -->
     <footer>
         <div class="logo">DUSTTE</div>
-        <p>&copy; 2024 DUSTTE LLC. All rights reserved.</p>
+        <p>&copy; 2025 DUSTTE LLC. All rights reserved.</p>
     </footer>
 
     <script>
@@ -1242,8 +1242,21 @@
             };
             
             // Here you would normally send to your backend/email service
-            console.log('Product Finder Request:', emailData);
-            
+            fetch('https://formsubmit.co/ajax/info@dustte.com', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify({
+                    name: company,
+                    email: email,
+                    phone: phone,
+                    category: emailData.category,
+                    volume: emailData.volume,
+                    grade: emailData.grade,
+                    message: details,
+                    _subject: 'Product Quote Request - DUSTTE'
+                })
+            }).catch(function() {});
+
             // Show success message
             document.getElementById('finderFormModal').style.display = 'none';
             document.getElementById('finderSuccess').classList.add('active');
@@ -1287,8 +1300,21 @@
                 details: details
             };
             
-            console.log('Custom Sourcing Request:', emailData);
-            
+            fetch('https://formsubmit.co/ajax/info@dustte.com', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify({
+                    name: company,
+                    email: email,
+                    phone: phone,
+                    product: product,
+                    quantity: quantity,
+                    timeline: timeline,
+                    message: details,
+                    _subject: 'Custom Sourcing Request - DUSTTE'
+                })
+            }).catch(function() {});
+
             // Show success
             document.getElementById('customFormModal').style.display = 'none';
             document.getElementById('customSuccess').classList.add('active');
